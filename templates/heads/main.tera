@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danmark - {{title}}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="/static/css/theming.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="/static/js/listeners.js" defer></script>
+</head>
+<body class="theme-dark">
+    {% if user %}
+        {% block logged_in_layout %}{% endblock %}
+    {% else %}
+        {% block not_logged_in %}{% endblock %}
+        {% block error_page %}{% endblock %}
+    {% endif %}
+   <div id="main-footer" class="center">
+       <h4><a href="https://danielsouza-portfolio.vercel.app">Desenvolvido por Daniel Souza</a></h4>
+   </div>
+</body>
+</html>

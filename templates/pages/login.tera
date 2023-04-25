@@ -1,0 +1,28 @@
+{% extends 'heads/main.tera' %}
+
+{% block not_logged_in %}
+
+<div class="container center bg-image">
+    <h1>Kloudan</h1>
+    <div class="card elevated">
+        <form class="form center" action="" method="post">
+            <div class="card-header">
+                <h2>Login</h2>
+            </div>
+            <div class="form-group">
+                <input name="email" id='email' type="email" placeholder="email@example.com" maxlength="150" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+                <input name="password" id='password' type="password" placeholder="**********" maxlength="150" required>
+                <label for="password">Senha</label>
+            </div>
+            <div class="action-buttons center">
+                <button class="dense primary" type="submit">Login</button>
+                <button class="outlined" type="button" link-href="/signup">Registrar-se</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{%endblock%}

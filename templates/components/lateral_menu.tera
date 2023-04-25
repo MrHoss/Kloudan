@@ -1,0 +1,20 @@
+{% extends "components/logged_in_layout.tera" %}
+
+{% block lateral_menu %}
+
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li link-href="/panel" class="nav-item"><i class="dropbtn material-icons-round">admin_panel_settings</i>Painel de controle</li>
+        <hr class="divider" />
+        <li link-href="/recent-files" class="nav-item"><i class="dropbtn material-icons-round">history</i>Arquivos recentes</li>
+        <li link-href="/favorites" class="nav-item"><i class="dropbtn material-icons-round">star</i>Favoritos</li>
+        <hr class="divider" />
+        <li link-href="/files" class="nav-item"><i class="dropbtn material-icons-round">folder</i>Meus arquivos</li>
+        <li link-href="/gallery" class="nav-item"><i class="dropbtn material-icons-round">collections</i>Galeria</li>
+        <li link-href="/documents" class="nav-item"><i class="dropbtn material-icons-round">description</i>Documentos</li>
+        <li link-href="/videos" class="nav-item"><i class="dropbtn material-icons-round">smart_display</i>Vídeos</li>
+        <li link-href="/trash" class="nav-item"><i class="dropbtn material-icons-round">delete</i>Lixeira</li>
+    </ul>
+</nav>
+
+{% endblock %}

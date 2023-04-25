@@ -1,0 +1,9 @@
+{% extends "components/lateral_menu.tera" %}
+
+{% block content %}
+
+<article>
+    <h1>Inicio</h1>
+</article>
+
+{% endblock %}

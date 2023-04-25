@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: rgba(3, 102, 214, 0.0) 0px 0px 0px 3px;
+    font-family: 'Ubuntu', 'Roboto', Tahoma, sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    color: var(--primary-text-color);
+}
+
+body {
+    /*background: linear-gradient(261deg, var(--background-color-gd) 0%, var(--background-color-gd2) 100%);
+    background-size: 100% 100%;*/
+    background-color: var(--background-color);
+}
+
+.bg-image {
+    background-image: url("/static/assets/background.jpg");
+    background-size: cover;
+}
+
+.theme-dark {
+    --primary-text-color: #d3d3d3;
+    --secondary-text-color: #868686;
+    --background-color: #0D1117;
+    --background-color-secondary: #1C2128;
+    --background-color-gd: #191919;
+    --background-color-gd2: #1a283b;
+    --paper-color-ts: #242424ea;
+    --paper-color: #161B22;
+    --input-background-color: #1c2128;
+    --primary-color: #2270DA;
+    --primary-color-hover: #0d55a7;
+    --secondary-color: #ce3030;
+    --secondary-color-hover: #d84b4b;
+    --tertiary-color:#d3692b;
+    --tertiary-color-hover: #e97e40;
+    --default: #00000000;
+    --default-hover: #ffffff25;
+    --default-active: #ffffff42;
+    --border-default-color: #30363D;
+    --backdrop-color: #00000059;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.primary:hover {
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
+    color: var(--primary-color-hover);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.secondary:hover {
+    background-color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+    color: var(--secondary-color-hover);
+}
+
+.dense,
+.dense:hover {
+    color: var(--primary-text-color);
+}
+
+.dense:active {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.outlined {
+    background-color: var(--default);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-default-color);
+    box-shadow: unset;
+}
+
+#header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--paper-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-bottom: 1px solid var(--border-default-color);
+}
+
+#header .material-icons-round {
+    font-size: 2em;
+    ;
+}
+
+#main-footer {
+    padding: 10px;
+    border-top: 1px solid var(--border-default-color);
+}
+/*Dropdown*/
+.dropdown .dropbtn{
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0 6px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: #ffffff11;
+}
+
+.dropdown-menu * {
+    min-width: 70px;
+    padding: 0 0;
+    font-size: 0.9em;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-item {
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-text-color);
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: auto -5px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--default-hover);
+}
+.dropdown-item:active{
+    background-color: var(--default-active);
+}
+.dropdown{
+    position: relative;
+    width: fit-content;
+}
+.dropdown .dropdown-menu {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    background-color: var(--paper-color);
+    color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    padding: 7px 5px;
+    position: absolute;
+    top:50px;
+    right: -10px;
+    z-index: 1;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+}
+
+.dropdown .dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 23px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--border-default-color) transparent;
+}
+/* fim dropdown*/
+
+button {
+    margin: 10px 0;
+    padding: 8px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: 1px solid var(--default);
+    background-color: var(--default);
+}
+
+button:hover {
+    cursor: pointer;
+    border: 1px solid var(--default);
+    background-color: var(--default-hover);
+}
+
+button:active {
+    background-color: var(--default-active);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px);
+    background-color: var(--background-color-secondary);
+}
+
+.column{
+    display: flex;
+    
+}
+
+.center {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.right {
+    align-items: end;
+    text-align: right;
+    justify-content: right;
+}
+.navbar{
+    background-color: #22272E;
+    width: 250px;
+    min-height: calc(100vh - 59px - 40px);
+    border-right: 1px solid var(--border-default-color);
+}
+.nav-item {
+    display: flex;
+    margin: 5px 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 6px;
+    border: 1px solid var(--default);
+    background-color: var(--default);
+}
+.nav-item i{
+    margin: 0 5px;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    border: 1px solid var(--default);
+    background-color: var(--default-hover);
+}
+
+.nav-item:active {
+    background-color: var(--default-active);
+}
+
+.elevated {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.divider {
+    background-color: var(--border-default-color);
+    height: 1px;
+    margin: 0;
+    border: 0;
+}
+.card {
+    border: 1px solid var(--border-default-color);
+    background-color: var(--paper-color);
+    border-radius: 8px;
+    padding: 0 20px;
+}
+.card .divider{
+    margin: 0 -20px;
+}
+
+.card-header {
+    margin: 20px 0;
+}
+.content{
+    width: calc(100vw - 250px);
+    background-color: var(--paper-color);
+}
+.content-header{
+    padding: 10px;
+    background-color: var(--background-color-secondary);
+}
+
+/*FORM FIELDS*/
+
+.form {
+    width: 500px;
+    text-align: left;
+}
+.form-fields{
+    padding: 10px 0;
+}
+.form-group {
+    margin: 10px 0;
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea,
+.form-group select {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    min-height: 42px;
+    padding: 14px 5px 0px 5px;
+    border: 1px solid var(--border-default-color);
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: var(--input-background-color);
+    appearance: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+.form-group label {
+    margin:  -28px 0px 0px 0px;
+    height:18px;
+    padding: 5px;
+    letter-spacing: 0.05em;
+}
+
+/**
+  * Translate down and scale the label up to cover the placeholder,
+  * when following an input (with placeholder-shown support).
+  * Also make sure the label is only on one row, at max 2/3rds of the
+  * field—to make sure it scales properly and doesn't wrap.
+  */
+.form-group input:placeholder-shown+label,
+.form-group textarea:placeholder-shown+label,
+.form-group select:placeholder-shown,
+.form-group label {
+    cursor: text;
+    font-size: 1rem;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0.9rem, 2.7rem) scale(1);
+}
+
+/**
+  * By default, the placeholder should be transparent. Also, it should 
+  * inherit the transition.
+  */
+
+.form-group ::placeholder{
+    opacity: 0;
+    transition: inherit;
+}
+
+/**
+  * Show the placeholder when the input is focused.
+  */
+/* Para todos os navegadores */
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder,
+.form-group select:focus::placeholder {
+    opacity: 1;
+}
+
+/**
+  * When the element is focused, remove the label transform.
+  * Also, do this when the placeholder is _not_ shown, i.e. when 
+  * there's something in the input at all.
+  */
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:focus+label,
+.form-group textarea:not(:placeholder-shown)+label,
+.form-group select:focus+label,
+.form-group select:not(:placeholder-shown)+label,
+.form-group label {
+    font-size: 0.8rem;
+    color: var(--primary-text-color);
+    transform: translate(0.5rem, 1.6rem) scale(1);
+}
+
+/*CHECKBOX SWITCH*/
+.switch-container {
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    margin: 10px 0;
+    margin-right: 10px;
+}
+
+.switch-label {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20px;
+}
+
+.terms-label {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.switch-input {
+    display: none;
+
+}
+
+.switch-label:before,
+.switch-label:after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.switch-label:before {
+    top: 2px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    background-color: var(--input-background-color);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.switch-label:after {
+    top: 6px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary-text-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.switch-input:checked+.switch-label:before {
+    background-color: var(--primary-color);
+}
+
+.switch-input:checked+.switch-label:after {
+    left: 28px;
+    background-color: #fff;
+}
+
+.dialog{
+    background-color: var(--backdrop-color);
+    border: 0;
+}
+.dialog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.dir-path{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+    background-color: var(--input-background-color);
+    padding: 2px;
+    margin: 2px;
+    border-radius: 6px;
+    border: 1px solid var(--border-default-color);
+}
+.dir-path-input{
+    outline: 0;
+    background-color: transparent;
+    color: var(--primary-text-color);
+    padding: 0 5px;
+    border:0;
+    height:25px;
+    width: 90%;
+}
+.dir-path-input:focus{
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 2px;
+}
+.dir-bar-button {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    margin: 1px;
+    text-transform: unset;
+}
+button:disabled, button:disabled i{
+    background-color: var(--default);
+    cursor: default;
+    color: var(--border-default-color);
+}
+.home-path{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-color: var(--primary-color);
+    width: fit-content;
+    padding: 4px;
+    border-radius: 4px;
+    cursor:pointer;
+}
+.home-path:hover{
+    background-color: var(--tertiary-color-hover);
+    box-shadow:var(--primary-color) 0px 0px 0.25em, var(--primary-color-hover) 0px 0.25em 1em;
+}

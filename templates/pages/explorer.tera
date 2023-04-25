@@ -1,0 +1,61 @@
+{% extends "components/lateral_menu.tera" %}
+
+{% block content %}
+<article class="content">
+    <header class="content-header">
+        <h1>Arquivos</h1>
+        <div class="dir-path">
+            <button class='dir-bar-button' type="button"><i class="material-icons-round">
+                    arrow_back
+                </i></button>
+                <button class='dir-bar-button' type="button" disabled><i class="material-icons-round">
+                        arrow_forward
+                    </i></button>
+            <button class='dir-bar-button' type="button"><i class="material-icons-round">
+                    refresh
+                </i></button>
+            <p class="home-path" link-href="/files"><i class="material-icons-round">
+                folder
+            </i>Meus Arquivos</p>/
+            <input name="dir-path" class='dir-path-input' type="text" placeholder="" maxlength="150">
+            <button class='dir-bar-button' type="button"><i class="material-icons-round">
+                arrow_forward
+            </i></button>|
+            <input name="dir-path" class='dir-path-input' type="search" placeholder="Pesquisar" maxlength="150">
+            <button class='dir-bar-button' type="button">Aa</button>
+            <button class='dir-bar-button' type="button">ab</button>
+            <button class='dir-bar-button' type="button">.*</button>
+            <button class='dir-bar-button' type="button"><i class="material-icons-round">
+                    search
+                </i></button>|
+            
+                <div class='dropdown'>
+                    <button class='dir-bar-button dropbtn' type="button"><i class="material-icons-round">
+                            more_vert
+                        </i></button>
+                    <ul class="dropdown-menu">
+                        <li show-hidden class="dropdown-item">
+                            <div class="switch-container">
+                                <input type="checkbox" id="show-hidden-files" class="switch-input">
+                                <label for="show-hidden-files" class="switch-label"></label>
+                                <label class="terms-label">Mostrar arquivos ocultos</label>
+                            </div>
+                        </li>
+                        <li open-dialog="preferences-dialog" class="dropdown-item">
+                            Preferências
+                        </li>
+                        <li open-dialog="help-dialog" class="dropdown-item">
+                            ajuda
+                        </li>
+                    </ul>
+                </div>
+            
+        </div>
+    </header>
+    <hr class="divider" />
+    <div class="file-explorer">
+
+    </div>
+</article>
+
+{% endblock %}

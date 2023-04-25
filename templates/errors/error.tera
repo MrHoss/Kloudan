@@ -1,0 +1,12 @@
+{% extends 'components/logged_in_layout.tera' %}
+
+{% block error_page %}
+
+<div class="center">
+    <p>{{status}}</p>
+    <p>{{message}}</p>
+    <a href="/login">Ir ao login</a><br>
+    <a href="/signup">Ir ao registro</a>
+</div>
+
+{% endblock %}

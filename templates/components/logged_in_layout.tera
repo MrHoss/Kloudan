@@ -1,0 +1,88 @@
+{% extends "heads/main.tera" %}
+
+{% block logged_in_layout %}
+<div class="container">
+    <header id="header">
+        <div class="row">
+            <a href="/" class="navbar-logo">
+                <h1>Kloudan</h1>
+            </a>
+        </div>
+        <div class="row">
+            <div class="dropdown">
+                <i class="dropbtn material-icons-round">add</i>
+                <ul class="dropdown-menu">
+                    <li open-dialog="profile-dialog" class="dropdown-item">
+                        Upload de arquivo
+                    </li>
+                    <li open-dialog="profile-dialog" class="dropdown-item">
+                        Upload de pasta
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <i class="dropbtn material-icons-round">notifications</i>
+                <ul class="dropdown-menu">
+                    <li link-href="/notification" class="dropdown-item">
+                        demoNotification1
+                    </li>
+                    <li link-href="/notification" class="dropdown-item">
+                        demoNotification2
+                    </li>
+                </ul>
+            </div>
+            <div class='dropdown'>
+                <i class="dropbtn material-icons-round">person</i>
+                <ul class="dropdown-menu">
+                    <li open-dialog="profile-dialog" class="dropdown-item">
+                        Perfil
+                    </li>
+                    <li link-href="/logout" class="dropdown-item">
+                        Sair
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <dialog id="profile-dialog" class="dialog">
+        <div class="dialog-container">
+            <div class="card elevated">
+                <form class="form center" method="put" post-path="/profile">
+                    <div class="card-header">
+                        <h2>Editar perfil</h2>
+                    </div>
+                    <hr class="divider" />
+                    <div class="form-fields">
+                    <div class="form-group">
+                        <input name="username" id='username' type="username" value="{{user.1}}" placeholder="John Doe"
+                            maxlength="150" required>
+                        <label for="username">Nome de usuário</label>
+                    </div>
+                    <div class="form-group">
+                        <input name="email" id='email' type="email" value="{{user.2}}" placeholder="email@exemplo.com"
+                            maxlength="150" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input name="password" id='password' type="password" placeholder="**********" maxlength="150"
+                            required>
+                        <label for="password">Senha</label>
+                    </div>
+                    </div>
+                    <hr class="divider" />
+                    <div class="action-buttons right">
+                        <button class="outlined" type="button" close-btn>Cancelar</button>
+                        <button class="dense primary" type="submit" ok-btn>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <div class="column">
+        {% block lateral_menu %}{% endblock %}
+        {% block content %}{% endblock %}
+    </div>
+    {% block error_page %}{% endblock %}
+    
+</div>
+{% endblock %}

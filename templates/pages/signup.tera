@@ -1,0 +1,36 @@
+{% extends 'heads/main.tera' %}
+
+{% block not_logged_in %}
+
+<div class="container center bg-image">
+    <h1>Kloudan</h1>
+    <form class="form card elevated center" action="" method="post">
+        <div class="card-header">
+            <h2>Criar conta</h2>
+        </div>
+        <div class="form-group">
+            <input name="username" id='username' type="username" placeholder="John Doe" maxlength="150" required>
+            <label for="username">Nome de usuário</label>
+        </div>
+        <div class="form-group">
+            <input name="email" id='email' type="email" placeholder="email@exemplo.com" maxlength="150" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+            <input name="password" id='password' type="password" placeholder="**********" maxlength="150" required>
+            <label for="password">Senha</label>
+        </div>
+
+        <div class="switch-container">
+            <input type="checkbox" id="terms-switch" class="switch-input">
+            <label for="terms-switch" class="switch-label"></label>
+            <label class="terms-label">Declaro que li e aceito os termos de uso</label>
+        </div>
+        <div class="action-buttons center">
+            <button class="dense primary" type="submit">Registrar-se</button>
+            <button class="outlined" type="button" link-href="/login">Voltar para login</button>
+        </div>
+    </form>
+</div>
+
+{%endblock%}
